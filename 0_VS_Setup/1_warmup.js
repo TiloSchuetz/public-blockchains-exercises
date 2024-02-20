@@ -52,12 +52,12 @@
 // Fix the two errors below with a red-line underneath.
 
 // a. Hint: follow the pattern.
-variable1 = 1;
-variable2 = 2;
-variable3 3;
+let variable1 = 1;
+var variable2 = 2;
+const variable3 = 3; // constant is read-only
 
 // b. Hint: This function needs a name after the word function.
-function () {
+function warmup () {
   console.log("Hello!");
 }
 
@@ -73,7 +73,7 @@ function () {
 // or Cmd-/ (Mac). Notice if you apply the command multiple times, it will
 // uncomment/comment/uncomment... it.
 
-// uselessCode = 'I am useless';
+// uselessCode = 'I am useless'; command shift 7
 
 // b. Cool. What other shorcuts are available? Here is a shortcut to find
 // them all. Ctrl-Shift-P. Look around and remember how to get here,
@@ -86,9 +86,9 @@ function () {
 // At every word "not" there is a new cursor, so you can write multiple rows
 // at once. Delete "not" and replace the exclamation mark with a sad face. 
 
-catchMeIfYouCan1 = "You did not catch me!";
-catchMeIfYouCan2 = "You did not catch me!";
-catchMeIfYouCan3 = "You did not catch me!";
+catchMeIfYouCan1 = "You hdhdhdhdhdhdhdhdhdhdhdh not catch me!";
+catchMeIfYouCan2 = "You hdhdhdhdhdhdhdhdhdhdhdh not catch me!";
+catchMeIfYouCan3 = "You hdhdhdhdhdhdhdhdhdhdhdh not catch me!";
 
 // d. Sometimes you want to move an entire line of code up or down. Of course
 // there is a shortcut for that: Alt-ArrowUp/Down.
