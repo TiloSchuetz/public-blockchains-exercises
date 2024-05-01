@@ -15,6 +15,9 @@ str2 = 'He said "Goodbye" and left.';
 // What is the difference? Can you swap the content and the type of quotes?
 // Hint: characters can be escaped by placing a backslah before them (\).
 
+str1 = 'Please don\'t do it.';
+str2 = "He said \"Goodbye\" and left.";
+
 // EXERCISE 2. Join and Count.
 //////////////////////////////
 
@@ -26,12 +29,14 @@ str2 = 'Just like everyone else.';
 // a. Join together these two strings and assign the result to a new variable
 // named finalStr.
 
+finalStr = str1 + ' ' + str2
+console.log(finalStr)
 
 // b. Did you remember to add a space between them?
 // If so, how many characters is the final string?
 // Hint: Use the length property.
 
-
+console.log(finalStr.length)
 // EXERCISE 3. Joining Different Types.
 ///////////////////////////////////////
 
@@ -47,6 +52,10 @@ luzernPopulation = 82000;
 // Then, join it with str1 and update finalStr.
 // Important. The sentence must end with a dot (needed for exercise below).
 
+str2 = 'Just like other ' + luzernPopulation + ' persons in Luzern.';
+finalStr = str1 + ' ' + str2;
+console.log(finalStr);
+
 // EXERCISE 4. Mind the Tick.
 /////////////////////////////
 
@@ -54,8 +63,10 @@ luzernPopulation = 82000;
 // backtick sign (`) which allows for in-string variable substitution with
 // the format `${myvariable}`.
 
-// Repeast exercise 3 using backticks.
-
+// Repeat exercise 3 using backticks.
+luzernPopulation = 82000;
+finalStr = `Just like other ${luzernPopulation} persons in Luzern.`
+console.log(finalStr)
 
 // EXERCISE 5. Such a String Manipulator.
 /////////////////////////////////////////
@@ -68,14 +79,20 @@ luzernPopulation = 82000;
 // the first part (i.e., the  initial content of str1).
 // Hint: Use the .substring() method and the length property.
 
+first = finalStr.substring(0,16)
+console.log(first)
+
 
 // f. Now shout it loud and make the it upper case.
 // Hint: Use the method .toUpperCase().
-
+first = first.toUpperCase()
+console.log(first)
 
 // g. Let's be honest. An upper case sentence must end with an exclamation mark.
 // Replace the dot at the end of the sentence with an exclamation mark.
 
+first = first.substring(0,15)+'!'
+console.log(first)
 
 // EXERCISE 6. Operators: const, var, let.
 //////////////////////////////////////////
@@ -93,11 +110,11 @@ luzernPopulation = 82000;
 // ever again, so you decide it to assign it to constant.
 
 // a. Assign finalStr to a constant.
-finalStr = 'ALWAYS REMEMBER THAT YOU ARE ABSOLUTELY UNIQUE!';
+const finalStr = 'ALWAYS REMEMBER THAT YOU ARE ABSOLUTELY UNIQUE!';
 
 
 // b. Now try to change it to something else.
-
+finalStr = '!!'
 
 // You should have seen error. We will later learn that constants behave
 // differently with objects.
@@ -105,7 +122,8 @@ finalStr = 'ALWAYS REMEMBER THAT YOU ARE ABSOLUTELY UNIQUE!';
 // c. If you instead use let to declare a variable, that variable needs not be 
 // already declared. Raise an error by re-declaring the variable below with let. 
 
-myLetVariable = 'Do not re-assign me.';
+let myLetVariable = 'Do not re-assign me.';
+// let myLetVariable = '!!'
 
 
 //////////////////////////////

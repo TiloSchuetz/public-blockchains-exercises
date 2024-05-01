@@ -212,7 +212,7 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 
 morpho = Symbol('I am unique');
 
-console.log('Morpho: ' + morpho);
+console.log('Morpho: ' + String(morpho));
 console.log('The type of Morpho is now: ' + typeof morpho);
 
 //////////////////////////////

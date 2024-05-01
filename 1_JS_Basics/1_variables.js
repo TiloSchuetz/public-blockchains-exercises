@@ -80,6 +80,8 @@ console.log('The value of the variable primitive is: ' + primitive);
 
 primitive = 'I am so primitive.';
 console.log(primitive);
+primitive = 'I am no longer primitive'
+console.log(primitive)
 
 // Assign the new string 'I am no longer primitive. I am making progress!'
 // to primitive and print it to console.
@@ -138,7 +140,7 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 
 
 // Strings
-
+morpho = 'test'
 
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
@@ -147,6 +149,7 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 
 // A one-type character string is also a string. Other languages have
 // the type 'char' for this special case, but not JS.
+morpho = 'X'
 
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
@@ -154,11 +157,13 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 // Booleans.
 
 // False.
+morpho = false
 
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
 // True.
+morpho = true
 
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
@@ -166,11 +171,14 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 // Not much to say about booleans, they are kind of booring. But useful.
 
 // Undefined.
+morpho = 
 
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
 
 // Null
+
+morpho = null
 
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
@@ -182,7 +190,7 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 
 // Bigints represent whole numbers larger than 2^53 - 1. You probably won't 
 // use them a lot.
-
+morpho = 1n;
 
 console.log('Morpho: ' + morpho);
 console.log('The type of Morpho is now: ' + typeof morpho);
@@ -190,8 +198,10 @@ console.log('The type of Morpho is now: ' + typeof morpho);
 // Symbols are variables that guaranteed to be unique. You probably won't 
 // use them a lot.
 
+morpho = Symbol('I am unique');
 
-console.log('Morpho: ' + morpho);
+
+console.log('Morpho: ' + String(morpho));
 console.log('The type of Morpho is now: ' + typeof morpho);
 
 
