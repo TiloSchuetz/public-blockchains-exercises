@@ -8,7 +8,7 @@
 // EXERCISE 0. Definitions.
 //////////////////////////
 
-// There are few way of creating functions in JavaScript.
+// There are few ways of creating functions in JavaScript.
 
 // Function declarations.
 // See also: https://javascript.info/function-basics
@@ -42,6 +42,9 @@ let hello3 = () => {
 
 // Create a function named printMyName that prints out your name.
 // Verify its type and invoke it.
+function printMyName() {
+    console.log('Brendan')
+}
 
 console.log('The type of printMyName is: ' + typeof printMyName);
 printMyName();
@@ -56,6 +59,11 @@ printMyName();
 // printSentence('Brendan');
 // 'Brendan is great!'.
 
+function printSentence(name) {
+    console.log(`${name} is great!`)
+}
+printSentence('Brendan')
+
 // EXERCISE 3. Print Person.
 ////////////////////////////
 
@@ -69,7 +77,7 @@ printMyName();
 // 'Brendan Eich is born is 1961 and he is great!'.
 
 function printSentence(person) {
-    // Add code here.
+    console.log(`${person.first} ${person.last} is born in ${person.year} and he is great`)
 }
 
 personObject = { first: 'Brendan', last: 'Eich', year: 1961 };
@@ -85,7 +93,8 @@ printSentence(personObject);
 // Hint: you may use the ternary operator ? for a more compact code.
 
 function printSentence2(person1, person2) {
-    // Add code here.
+    let person = person1.year > person2.year ? person1 : person2 // comparison ? what happens if true : what happens if false
+    console.log(`${person.first} ${person.last} is born in ${person.year} and he is great`)
 }
 brendan = { first: 'Brendan', last: 'Eich', year: 1961 };
 linus = { first: 'Linus', last: 'Torvalds', year: 1969 };
@@ -102,6 +111,18 @@ printSentence2(brendan, linus);
 // Create two functions. One returns the person object that is the youngest,
 // the second one prints it.
 // Hint: combine the return statement and the ternary operator for a one-liner.
+brendan = { first: 'Brendan', last: 'Eich', year: 1961 };
+linus = { first: 'Linus', last: 'Torvalds', year: 1969 };
+
+function youngReturn(person1, person2) {
+    return person1.year > person2.year ? person1 : person2
+}
+console.log(youngReturn(brendan, linus))
+
+function youngPrint(person1, person2) {
+    console.log(person1.year > person2.year ? person1 : person2)
+}
+youngPrint(brendan, linus)
 
 
 // EXERCISE 6 Scope.
@@ -126,7 +147,13 @@ printSentence2(brendan, linus);
 // parameters for the printSentence function above. Rewrite the function so
 // that it accesses directly the brendan and linus objects created before
 // without using input parameters.
+brendan = { first: 'Brendan', last: 'Eich', year: 1961 };
+linus = { first: 'Linus', last: 'Torvalds', year: 1969 };
 
+function youngReturn() {
+    return brendan.year > linus.year ? brendan : linus
+}
+console.log(youngReturn())
 
 // b. Advanced. A function can also modify/create other variables outside its
 // body, but inside its scope. Modify the whoIsYounger function so
@@ -134,7 +161,14 @@ printSentence2(brendan, linus);
 // result in a global variable youngest.
 // Hint: whether you use let youngest = ... or simply youngest = ...
 // inside the function makes a big difference. Do you understand why?
+brendan = { first: 'Brendan', last: 'Eich', year: 1961 };
+linus = { first: 'Linus', last: 'Torvalds', year: 1969 };
+let youngest
 
+function youngestAssign() {
+    youngest = brendan.year > linus.year ? brendan : linus
+};
+youngestAssign()
 console.log(youngest);
 
 // c. Ninja. You can think at the scope of a variable like a set of nested
@@ -146,14 +180,14 @@ console.log(youngest);
 commonVariable = 0;
 
 function dollA() {
-    let privateVariableDollA = 10;
+    privateVariableDollA = 10;
     commonVariable += privateVariableDollA;
     // dollA function has no access to the variable defined inside dollB.
     // console.log(privateVariableDollB); // Will throw an error.
 }
 
 function dollB() {
-    let privateVariableDollB = -10;
+    privateVariableDollB = -10; // !!!!! with let the variable doesn't leak into the global space
     commonVariable += privateVariableDollB;
     // dollB function has no access to the variable defined inside dollA.
     // console.log(privateVariableDollA); // Will throw an error.
@@ -182,6 +216,7 @@ console.log(privateVariableDollB); // Will throw an error.
 
 // a. Create a function that takes in input a person object and another
 // function and prints a string accordingly.
+brendan = { first: 'Brendan', last: 'Eich', year: 1961 };
 
 function isGreat() {
     return ' is great.';
@@ -190,7 +225,7 @@ function isNotGreat() {
     return ' who?';
 }
 function judgePerson(person, cb) {
-    // Your code here.
+    console.log(brendan.first + cb())
 }
 
 judgePerson(brendan, isGreat);

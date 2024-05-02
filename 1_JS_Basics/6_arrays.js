@@ -32,11 +32,22 @@ brendan = {
     last: 'Eich',
     year: 1961
 };
+pablo = {
+    first: 'Pablo',
+    last: 'Picasso',
+    year: 1881
+};
+napoleon = {
+    first: 'Napoleon',
+    last: 'Bonaparte',
+    year: 1769
+};
 
-// persons = ...
+persons = [brendan, pablo, napoleon]
 
 // b. Count how many elements are in the array.
 // Hint: Use the .length property.
+console.log(persons.length)
 
 // EXERCISE 2. Accessing items inside arrays.
 /////////////////////////////////////////////
@@ -47,6 +58,8 @@ brendan = {
 // Hint: arrays are 0-indexed, that is the first element has index 0,
 // the second element 1, and so on.
 
+console.log(`${persons[1].first} was born in ${persons[1].year}`)
+
 // EXERCISE 3. Pick a random item in the array of persons.
 //////////////////////////////////////////////////////////
 
@@ -56,7 +69,8 @@ brendan = {
 // number of elements in the array, then "floor" it with the corresponding
 // method of the Math object.
 
-// randomNumber = ... 
+randomNumber = Math.floor(Math.random()*persons.length);
+console.log(randomNumber);
 console.log(persons[randomNumber]);
 
 // EXERCISE 4. Add a new element to the array of persons.
@@ -65,6 +79,12 @@ console.log(persons[randomNumber]);
 // You just realized that Phil Katz (born 1962) also deserves to be
 // added to the list. Who is Phil Katz? This is a sad story that deserve some
 // attention.
+phil = {
+    first: 'Phil',
+    last: 'Katz',
+    year: 1962
+};
+persons.push(phil)
 
 // Create a new object for Phil Katz and add it at the bottom of the array.
 // Hint: There are a couple of ways of achieving this, depending to where
@@ -94,6 +114,8 @@ console.log(persons[3]);
 // Hint: the method `splice` modifies the original array and returns the
 // removed elements.
 
+persons.splice(1,2)
+
 // Verify the content of the updated array.
 console.log(persons);
 
@@ -105,6 +127,10 @@ console.log(persons);
 // Hint: in loose type comparisons 0 == false.
 
 myArray = [];
+
+if (myArray == false) {
+    console.log('Wild')
+}
 
 
 //////////////////////////////
