@@ -34,7 +34,7 @@ console.log(typeof NaN);
 // a special return value with a warning on console.log.
 
 function divideNumbers(a, b) {
-    // Your code here.
+    
 }
 
 divideNumbers('what', {});

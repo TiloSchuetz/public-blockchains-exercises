@@ -225,7 +225,7 @@ function isNotGreat() {
     return ' who?';
 }
 function judgePerson(person, cb) {
-    console.log(brendan.first + cb())
+    console.log(person.first + cb())
 }
 
 judgePerson(brendan, isGreat);
@@ -245,11 +245,14 @@ judgePerson(brendan, isNotGreat);
 
 // Create a function that sorts the elements of the persons array from
 // youngest to older.
+brendan = { first: 'Brendan', last: 'Eich', year: 1961 };
+linus = { first: 'Linus', last: 'Torvalds', year: 1969 };
 persons = [ brendan, linus ];
 
-persons.sort(
-    // Define a comparator function in here.
-);
+persons.sort(function(a, b) {
+    if (a.year < b.year) return 1;
+    return -1;
+});
 console.log(persons);
 
 //////////////////////////////
