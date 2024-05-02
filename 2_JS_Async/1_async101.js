@@ -34,6 +34,10 @@ timeout = setTimeout(() => console.log("Hello Bill!"), 2000);
 
 // Hint: use a third variable to hold the name of the person.
 
+name = 'Brandon'
+let timeout2 = setTimeout(() => console.log(`Hello ${name}`), 2000);
+name = 'Bill'
+timeout2 = setTimeout(() => console.log(`Hello ${name}`), 2000);
 
 // EXERCISE 2. Intervals.
 /////////////////////////
@@ -54,4 +58,8 @@ let interval = setInterval(() => {
 
 // b. Bill, shocked by your compulsive reaction, finally says "Hello..." after
 // 10 seconds. You can then clear the interval.
+let interval2 = setInterval(() => {
+    console.log('Hello Bill!');
+}, 1000);
 
+let billAnswer = setTimeout(() => console.log('Hello...'), 10000)
